@@ -36,6 +36,7 @@ from __future__ import print_function
 
 import tensorflow as tf
 
+# import custom script
 from datasets import download_and_convert_diabetic
 
 FLAGS = tf.app.flags.FLAGS
@@ -50,7 +51,7 @@ tf.app.flags.DEFINE_string(
     None,
     'The directory where the output TFRecords and temporary files are saved.')
 
-
+# run script
 def main(_):
   if not FLAGS.dataset_name:
     raise ValueError('You must supply the dataset name with --dataset_name')
